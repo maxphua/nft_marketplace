@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { useRouter } from 'next/router';
 import axios from 'axios';
-import { create } from 'ipfs-http-client';
+// import { create } from 'ipfs-http-client';
 import { NFTContext } from '../context/NFTContext';
 import { Loader, Button, Input } from '../components';
 

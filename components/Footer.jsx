@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes';
 import Image from 'next/image';
 
 import images from '../assets';
-import { Button } from '.';
+import Button from './Button';
 
 const FooterLinks = ({ heading, items }) => (
   <div className="flex-1 justify-start items-start">

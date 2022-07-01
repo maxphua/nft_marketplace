@@ -16,7 +16,7 @@ import { useTheme } from 'next-themes';
 
 import { NFTContext } from '../context/NFTContext';
 import { Banner, CreatorCard, Loader, NFTCard, SearchBar } from '../components';
-import { makeId } from '../utils/makeId';
+// import { makeId } from '../utils/makeId';
 import { getCreators } from '../utils/getTopCreators';
 
 import images from '../assets';

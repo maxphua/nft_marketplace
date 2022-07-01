@@ -2,8 +2,9 @@ import Script from 'next/script';
 import { ThemeProvider } from 'next-themes';
 
 import { NFTProvider } from '../context/NFTContext';
-import { Navbar, Footer } from '../components';
-
+// import { Navbar, Footer } from '../components';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => (
