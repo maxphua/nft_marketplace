@@ -7,7 +7,7 @@ node_modules
 /out/
 
 # production
-/build
+# /build
 
 # local env files
 .env
