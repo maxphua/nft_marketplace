@@ -4,7 +4,7 @@ import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-import { Input, Button } from '../components';
+import { Input, Button, Loader } from '../components';
 import images from '../assets';
 import { NFTContext } from '../context/NFTContext';
 
@@ -13,7 +13,7 @@ const CreateNFT = () => {
   const { theme } = useTheme();
   const [formInput, setFormInput] = useState({ price: '', name: '', description: '' });
   // console.log(formInput); // to check input on form
-  const { uploadToIPFS, createNFT } = useContext(NFTContext);
+  const { isLoadingNFT, uploadToIPFS, createNFT } = useContext(NFTContext);
   const router = useRouter();
 
   // useCallback willmemory the returned value, if u want to recompute the actual function
@@ -37,6 +37,14 @@ const CreateNFT = () => {
     ${isDragAccept && 'border-file-accept'}
     ${isDragReject && 'border-file-reject'}`
   ), [isDragActive, isDragAccept, isDragReject]);
+
+  if (isLoadingNFT) {
+    return (
+      <div className="flexStart min-h-screen">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <div className="flex justify-center sm:px-4 p-12">
@@ -64,7 +72,7 @@ const CreateNFT = () => {
                     height={100}
                     objectFit="contain"
                     alt="file upload"
-                    className={theme === 'light' && 'filter invert'}
+                    className={theme === 'light' ? 'filter invert' : ''}
                   />
                 </div>
 
