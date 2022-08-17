@@ -40,15 +40,9 @@ Vercel
 
 Tailwind js
 
-#What i learned
 
-- How to connect a regular React.js application to the blockchain and pair with Ethereum wallet using MetaMask
-
-- Learn how to write Smart Contracts on the Ethereum network using the #Solidity programming language
-
-- Learn how to create a non-fungible token(NFTs)
 
 #Credits
 
-Tutorial from JavaScript Mastery from paid course
+Paid course Tutorial from JavaScript Mastery from youtube
 
